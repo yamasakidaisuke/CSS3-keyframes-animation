@@ -1,0 +1,79 @@
+h2 {
+  font-size: 200px;
+  display: inline-block;
+}
+
+article {
+  margin-left: 155px;
+}
+body {
+	position: relative;
+}
+#sidebar {
+  position: absolute;
+  width: 155px;
+  -webkit-transition: transform 1s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: transform 1s cubic-bezier(0.23, 1, 0.32, 1);
+  transform: translate3d(0,var(--scroll-y),0);
+  background-color: pink;
+  -webkit-transition: transform 1s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: transform 1s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  @keyframes sizeScale {
+    0% {
+        transform: scale(1);
+    }
+    80% {
+      transform: scale(1)
+    }
+    85% {
+      transform: scale(1.1)
+    }
+    100% {
+        transform: scale(1)
+    }
+  }
+@keyframes sizeScale2 {
+  0% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+  100% {
+    -webkit-transform: scale(0.95, 0.95);
+    transform: scale(0.95, 0.95);
+  }
+}
+@keyframes sphereAnime {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+}
+.heart-movement {
+  animation-name: sizeScale;
+  animation-duration: .7s;
+  animation-timing-function: linear;
+  animation-delay: 3s;
+  animation-iteration-count: infinite;
+}
+.logo-anime {
+  animation-name: sizeScale2;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-delay: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.sphere-anime {
+  -webkit-animation: sphereAnimae 6s linear 0s infinite;
+  -moz-animation: sphereAnime 6s linear 0s infinite;
+  animation: sphereAnime 6s linear 0s infinite;
+  animation-fill-mode: none;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
